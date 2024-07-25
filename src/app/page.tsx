@@ -4,7 +4,7 @@ import type {Ad, Network} from "@/types";
 
 import {Suspense, useState} from "react";
 
-import Lazy from "@/components/lazy";
+import Defer from "@/components/defer";
 import {SocialAd} from "@/components/social-ad";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -58,7 +58,7 @@ export default function HomePage() {
       </aside>
       <article>
         <Suspense fallback={<Skeleton className="h-[187.99px] w-[512px] rounded-lg" />}>
-          <Lazy ad={ad} as={SocialAd} network={network} />
+          <Defer ad={ad} as={SocialAd} network={network} />
         </Suspense>
       </article>
     </section>

@@ -8,7 +8,7 @@ import {unstable_postpone as postpone, useEffect, useState, useTransition} from 
  * We still fetch only once but we get the suspense behavior we want by using postpone during pre-rendering and a transition during client side fetching.
  */
 
-export default function Lazy<Props>({
+export default function Defer<Props>({
   as: getPayload,
   reloadEvery = 0,
   ...props
